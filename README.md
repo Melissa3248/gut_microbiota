@@ -1,5 +1,15 @@
 # gut_microbiota
 
+ODEsolns.jl:
+
+Sobol.jl: Sobol code to produce first order and total order Sobol sensitivities for parameters in our ODE model.
+
+sobol_heatmap.ipynb: notebook used to produce the heatmap visualizations of our first and total order Sobol indices.
+
+sobol_indices.jl: code file that contains the main functions used for computing Sobol indicies.
+
+/images: folder containing the png images that appear in the manuscript
+
 This repository contains code files for the paper https://arxiv.org/abs/2303.12026
 
 https://drive.google.com/drive/folders/1DIVYCq_e2JhSJtS0IqshmzGxZoACegO3
