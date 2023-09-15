@@ -4,7 +4,7 @@ This repository contains code files for the paper https://arxiv.org/abs/2303.120
 
 https://drive.google.com/drive/folders/1DIVYCq_e2JhSJtS0IqshmzGxZoACegO3
 
-# BibTeX Citation
+## BibTeX Citation
 
 @misc{adrian2023,
       title={A mathematical model of B. thetaiotaomicron, M. smithii, and E. rectale interactions in the human gut}, 
