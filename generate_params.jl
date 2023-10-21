@@ -71,17 +71,17 @@ save_object(args["save_directory"] * "/C$i.jld2", C)
 # save the results for A and B#
 ###############################
 # compute the results for A and B for all samples
-res_A, loss_A = sample(A)
+res_A = sample(A)
 
 println("starting to solve B")
 println(Dates.format(now(), "HH:MM:SS") )
 #println("solved for A")
-res_B, loss_B  = sample(B)
+res_B  = sample(B)
 #println("solved for B")
 
 # save the value of the loss function for each parameter
-save_object(args["save_directory"] * "/loss_A$i.jld2", loss_A)
-save_object(args["save_directory"] * "/loss_B$i.jld2", loss_B)
+#save_object(args["save_directory"] * "/loss_A$i.jld2", loss_A)
+#save_object(args["save_directory"] * "/loss_B$i.jld2", loss_B)
 
 # save the results from the ODE solve
 save_object(args["save_directory"] * "/res_A$i.jld2", res_A)
@@ -98,5 +98,5 @@ println(Dates.format(now(), "HH:MM:SS") )
 res_C = [sample(C[n]) for n in 1:length(upper_b)]
 
 # save the ODE solution and the losses
-save_object(args["save_directory"] * "/res_C$i.jld2", res_C) # includes loss
+save_object(args["save_directory"] * "/res_C$i.jld2", res_C) 
 println(Dates.format(now(), "HH:MM") )
