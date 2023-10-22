@@ -57,9 +57,9 @@ def run_job(temp_job_folder, job_name, num_samples, idx, save_directory):
     job_file = '{}/{}.job'.format(temp_job_folder, job_name)
     with open(job_file,'w') as fh:
         fh.writelines("#!/bin/bash")
-        fh.writelines("\n#$ -N {}") # name of the job
+        fh.writelines("\n#$ -N {}".format(job_name)) # name of the job
         fh.writelines("\n#$ -q BA") # name of the queue
-        fh.writelines("#$ -pe smp 1") # number of threads to use
+        fh.writelines("\n#$ -pe smp 1") # number of threads to use
         #fh.writelines("\n#SBATCH -q regular # this is probably named something different on the iowa cluster")
         #fh.writelines("\n#SBATCH -J {}".format(job_name))
         #fh.writelines("\n#SBATCH -t 00:15:00")
