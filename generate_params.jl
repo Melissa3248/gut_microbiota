@@ -42,9 +42,12 @@ args = parse_commandline()
 # create the A and B samples#
 #############################
 
+# load in estimated parameters 
+NM_params = load("params.jld2")["data"]
+
 # specify the upper and lower limits of the parameter ranges
-upper_b =  [1e6, 10,10,10,1000,1e5,1e5,10,10,1e5,1e4,1e4,1e4,1e4,1e6,1e6,1e5,1e8,1e8,10]
-lower_b = repeat([0],length(upper_b))
+upper_b =  NM_params*5
+lower_b = NM_params/2
 
 # sample A and B
 sampler =LatticeRuleSample() # generates a sample -- seed is not fixed so we will get different draws every time this is called
@@ -99,4 +102,4 @@ res_C = [sample(C[n]) for n in 1:length(upper_b)]
 
 # save the ODE solution and the losses
 save_object(args["save_directory"] * "/res_C$i.jld2", res_C) 
-println(Dates.format(now(), "HH:MM") )
+println(Dates.format(now(), "HH:MM:SS") )

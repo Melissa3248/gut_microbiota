@@ -22,11 +22,11 @@ def run_job(temp_job_folder, job_name, num_samples, idx, save_directory):
         fh.writelines("\n#SBATCH -C cpu")
         fh.writelines("\n#SBATCH -q regular # this is probably named something different on the iowa cluster")
         fh.writelines("\n#SBATCH -J {}".format(job_name))
-        fh.writelines("\n#SBATCH -t 00:15:00")
-        #fh.writelines("\n#SBATCH --account=m4212_g")
+        fh.writelines("\n#SBATCH -t 00:07:00")
+        fh.writelines("\n#SBATCH --account=m4212")
         fh.writelines("\n#SBATCH --output={}/out_files/%x.out".format(temp_job_folder))
         fh.writelines("\njulia generate_params.jl {} {} {}".format(num_samples, idx, save_directory))
-    #os.system('sbatch {}'.format(job_file)) ################### uncomment this when you actually want to submit the jobs
+    os.system('sbatch {}'.format(job_file)) ################### uncomment this when you actually want to submit the jobs
 
 ######################################################################################
 #                             Set up ArgumentParser                                  #
@@ -39,10 +39,12 @@ mkdir_p(args.save_directory)
 
 ts = []
 
-n_runs = int(2**20/512)
+n_solves = 2048
+
+n_runs = int(2**20/n_solves)
 
 for t in range(n_runs):
-    ts.append([512,t, args.save_directory])
+    ts.append([n_solves,t, args.save_directory])
 
 
 for t_ix in ts:
