@@ -1,0 +1,42 @@
+name: base
+channels:
+  - conda-canary
+  - defaults
+  - conda-forge
+dependencies:
+  - conda
+  - python=3.9
+  - conda-env
+  - conda-build
+  - conda-verify
+  - _ipyw_jlab_nb_ext_conf
+  - anaconda-navigator
+  - navigator-updater
+  - mamba
+  - astropy
+  - cartopy
+  - cython
+  - cfitsio
+  - dask
+  - scipy
+  - scikit-learn
+  - scikit-image
+  - numba
+  - h5py
+  - matplotlib
+  - joblib
+  - pandas
+  - seaborn
+  - statsmodels
+  - ca-certificates
+  - certifi
+  - openssl
+  - ipython=7.31.1
+  - ipympl=0.8.6
+  - authlib
+  - tabulate
+  - psycopg2
+  - netcdf4
+  - mysql-connector-python
+  - dask-mpi
+prefix: /global/common/software/nersc/pm-2022q3/sw/python/3.9-anaconda-2021.11
