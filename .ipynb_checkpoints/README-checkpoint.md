@@ -12,7 +12,7 @@ This repository contains code files for the paper https://arxiv.org/abs/2303.120
 
 ## Dependencies 
 
-In this project, we utilized Julia v1.8.0. We list our package dependencies below, which are included in the Project.toml file in this repository.
+In this project, we utilized Julia v1.8.0. We list our package dependencies below, which are included in the ```Project.toml``` file in this repository.
 
 [c7e460c6] ArgParse v1.1.4
 
