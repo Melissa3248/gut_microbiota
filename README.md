@@ -56,11 +56,16 @@ In this project, we utilized Julia v1.8.0. We list our package dependencies belo
 
 ## BibTeX Citation
 
-@misc{adrian2023,
-      title={A mathematical model of B. thetaiotaomicron, M. smithii, and E. rectale interactions in the human gut}, 
-      author={Melissa A. Adrian and Bruce P. Ayati and Ashutosh K. Mangalam},
-      year={2023},
-      eprint={2303.12026},
-      archivePrefix={arXiv},
-      primaryClass={q-bio.PE}
+@article{Adrian2023,
+author = {Adrian, Melissa A and Ayati, Bruce P and Mangalam, Ashutosh K},
+doi = {10.1038/s41598-023-48524-4},
+isbn = {0123456789},
+issn = {2045-2322},
+journal = {Scientific Reports},
+number = {0123456789},
+pages = {1--11},
+publisher = {Nature Publishing Group UK},
+title = {{A mathematical model of Bacteroides thetaiotaomicron , interactions in the human gut}},
+url = {https://doi.org/10.1038/s41598-023-48524-4},
+year = {2023}
 }
